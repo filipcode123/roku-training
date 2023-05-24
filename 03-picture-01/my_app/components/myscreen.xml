@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MyScreen" extends="Scene">
+<children>
+<LabelList
+id = "myLabelList"
+translation = "[160,92]"
+>
+    <ContentNode id="menuContent" role="content">
+        <ContentNode title = "Label A"/>
+        <ContentNode title = "Label B"/>
+        <ContentNode title = "Label C"/>
+        <ContentNode title = "Label D"/>
+    </ContentNode>
+</LabelList>
+<Poster
+    id ="myPoster"
+    uri = "pkg:/images/my_poster_image.png"
+    translation="[160,92]"
+/>
+</children>
+</component>
