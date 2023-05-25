@@ -17,5 +17,11 @@ translation = "[160,92]"
     uri = "pkg:/images/my_poster_image.png"
     translation="[700,200]"
 />
+<ButtonGroup id="myButtonGroup" translation="[160,300]">
+    <Button text="Button 1"/>
+    <Button text="Button 2"/>
+    <Button text="Button 3"/>
+    <Button text="Button 4"/>
+</ButtonGroup>
 </children>
 </component>
