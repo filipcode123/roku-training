@@ -1,2 +1,2 @@
-Displays a label, label list, button group and poster via brightscript code instead of SceneGraph XML
+Sets the initial focus of a node
 <img src="screenshot.jpg">
