@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MyScreen" extends="Scene">
+<script type="text/brightscript">
+<![CDATA[
+    sub init()
+        my_title = CreateObject("roSGNode","label")
+        my_title.text = "Hello, World!"
+        my_title.height="720"
+        my_title.width="1280"
+        my_title.horizAlign="left"
+        my_title.vertAlign="top"
+        my_title.color = "0xFF9E00FF"
+        m.top.appendChild(my_title)
+
+        content_main = CreateObject("roSGNode","ContentNode")
+        section_a = content_main.createChild("ContentNode")
+        section_a.CONTENTTYPE = "SECTION"
+        
+        item_1 = section_a.createChild("ContentNode")
+        item_1.title = "Item 1"
+        item_2 = section_a.createChild("ContentNode")
+        item_2.title = "Item 2"   
+        item_3 = section_a.createChild("ContentNode")
+        item_3.title = "Item 3"
+
+        label_list = CreateObject("roSGNode","labellist")
+        label_list.content = content_main
+        label_list.translation="[200,200]"
+
+        m.top.appendChild(label_list)
+
+        button_group = CreateObject("roSGNode","buttongroup")
+        button_group.buttons = ["Button A","Button B","Button C"]
+        button_group.translation="[200,500]"
+        button_group.setFocus(True)
+        m.top.appendChild(button_group)
+
+        picture = CreateObject("roSGNode","poster")
+        picture.uri = "pkg:/images/my_poster_image.png"
+        picture.translation="[500,200]"
+
+        m.top.appendChild(picture)
+
+    end sub
+
+    function onKeyEvent(key as String, press as Boolean) as Boolean
+        if press then
+            print key
+        end if
+    end function
+]]>
+</script>
+<children>
+
+</children>
+</component>
