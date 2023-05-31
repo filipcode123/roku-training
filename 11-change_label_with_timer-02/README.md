@@ -1,5 +1,6 @@
 Changes the label's text when the timer fires.
-<img src="screenshot1.jpg">
-<img src="screenshot2.jpg">
-<img src="screenshot1.jpg">
-<img src="screenshot2.jpg">
+<br>
+<img src="screenshot1.jpg" width="300">
+<img src="screenshot2.jpg" width="300">
+<img src="screenshot1.jpg" width="300">
+<img src="screenshot2.jpg" width="300">
