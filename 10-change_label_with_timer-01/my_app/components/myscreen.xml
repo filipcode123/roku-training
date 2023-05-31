@@ -59,6 +59,7 @@
     sub updateLabelText()
         print("timer has fired")
         m.my_title.text = "This text has changed after 5 seconds"
+        m.test_timer.control = "stop"
     end sub
 
     sub onButtonGroupSelectionChange()
