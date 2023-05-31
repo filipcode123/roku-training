@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MyScreen" extends="Scene">
+<script type="text/brightscript">
+<![CDATA[
+    sub init()
+        m.my_title = CreateObject("roSGNode","label")
+        m.my_title.text = "LABEL ONE"
+        m.my_title.height="720"
+        m.my_title.width="1280"
+        m.my_title.horizAlign="left"
+        m.my_title.vertAlign="bottom"
+        m.my_title.color = "0xFF9E00FF"
+        m.top.appendChild(m.my_title)
+
+        content_main = CreateObject("roSGNode","ContentNode")
+        section_a = content_main.createChild("ContentNode")
+        section_a.CONTENTTYPE = "SECTION"
+        
+        item_1 = section_a.createChild("ContentNode")
+        item_1.title = "Item 1"
+        item_2 = section_a.createChild("ContentNode")
+        item_2.title = "Item 2"   
+        item_3 = section_a.createChild("ContentNode")
+        item_3.title = "Item 3"
+
+        label_list = CreateObject("roSGNode","labellist")
+        label_list.content = content_main
+        label_list.translation="[200,200]"
+
+        m.top.appendChild(label_list)
+
+        m.button_group = CreateObject("roSGNode","buttongroup")
+        m.button_group.buttons = ["Button A","Button B","Button C"]
+        m.button_group.translation="[200,500]"
+        m.button_group.setFocus(True)
+        m.button_group.observeField("buttonFocused","onButtonGroupSelectionChange")
+        m.top.appendChild(m.button_group)
+
+        m.picture = CreateObject("roSGNode","poster")
+        m.picture.uri = "pkg:/images/my_poster_image.png"
+        m.picture.translation="[500,200]"
+
+        m.top.appendChild(m.picture)
+
+        my_overhang = CreateObject("roSGNode","overhang")
+        my_overhang.title = "Main page"
+        my_overhang.showClock = true
+        m.top.appendChild(my_overhang)
+
+
+        main_timer = CreateObject("roSGNode","Timer")
+        main_timer.repeat = "false"
+        main_timer.duration= "20"
+        main_timer.control = "start"
+        main_timer.observeField("fire","stopTestTimer")
+        m.top.appendChild(main_timer)
+
+        m.test_timer = CreateObject("roSGNode","Timer")
+        m.test_timer.repeat = "true"
+        m.test_timer.duration = "5"
+        m.test_timer.control = "start"
+        m.test_timer.observeField("fire","swapLabelText")
+        m.top.appendChild(m.test_timer)
+
+        m.show_label_one = false
+    end sub
+
+    sub stopTestTimer()
+        print("timer has stopped")
+        m.test_timer.control = "stop"
+    end sub
+
+    sub swapLabelText()
+        print("timer has fired")
+        if m.show_label_one then
+            m.my_title.text = "LABEL ONE"
+        m.picture.uri = "pkg:/images/my_poster_image.png"
+            m.show_label_one = false
+        else
+            m.my_title.text = "LABEL TWO"
+        m.picture.uri = "pkg:/images/my_poster_image_2.png"
+            m.show_label_one = true
+        end if 
+    end sub
+
+    sub onButtonGroupSelectionChange()
+        if m.button_group.buttonFocused <> invalid then
+            focused_button = m.button_group.buttonFocused
+            if focused_button = 0 then
+                print "get image one"
+                m.picture.uri = "pkg:/images/poster_1.png"
+            else if focused_button = 1 then
+                print "get image two"
+                m.picture.uri = "pkg:/images/poster_2.png"
+            else if focused_button = 2 then
+                print "get image three"
+                m.picture.uri = "pkg:/images/poster_3.png"
+            end if
+        end if
+    end sub
+
+    function onKeyEvent(key as String, press as Boolean) as Boolean
+        if press then
+            print key
+        end if
+
+    end function
+]]>
+</script>
+<children>
+
+</children>
+</component>
