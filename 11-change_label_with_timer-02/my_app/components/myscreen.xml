@@ -47,14 +47,6 @@
         my_overhang.showClock = true
         m.top.appendChild(my_overhang)
 
-
-        main_timer = CreateObject("roSGNode","Timer")
-        main_timer.repeat = "false"
-        main_timer.duration= "20"
-        main_timer.control = "start"
-        main_timer.observeField("fire","stopTestTimer")
-        m.top.appendChild(main_timer)
-
         m.test_timer = CreateObject("roSGNode","Timer")
         m.test_timer.repeat = "true"
         m.test_timer.duration = "5"
@@ -63,6 +55,7 @@
         m.top.appendChild(m.test_timer)
 
         m.show_label_one = false
+        m.seconds_passed = 0
     end sub
 
     sub stopTestTimer()
@@ -71,16 +64,25 @@
     end sub
 
     sub swapLabelText()
-        print("timer has fired")
+        m.seconds_passed = m.seconds_passed + 5
+        print(m.show_label_one = true)
+        print("==============================")
         if m.show_label_one then
             m.my_title.text = "LABEL ONE"
-        m.picture.uri = "pkg:/images/my_poster_image.png"
+            m.picture.uri = "pkg:/images/my_poster_image.png"
             m.show_label_one = false
         else
             m.my_title.text = "LABEL TWO"
-        m.picture.uri = "pkg:/images/my_poster_image_2.png"
+            m.picture.uri = "pkg:/images/my_poster_image_2.png"
             m.show_label_one = true
         end if 
+        print("timer has fired")
+        print(m.picture.uri)
+        print(m.my_title.text)
+        
+        if m.seconds_passed = 20 then
+            stopTestTimer()
+        end if
     end sub
 
     sub onButtonGroupSelectionChange()
