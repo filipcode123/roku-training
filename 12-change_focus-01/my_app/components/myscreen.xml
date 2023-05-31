@@ -41,6 +41,7 @@
         m.button_group_2.translation="[600,500]"
         m.button_group_2.observeField("buttonFocused","onButtonGroupSelectionChange")
         m.top.appendChild(m.button_group_2)
+        m.button_group_2.visible = false
 
         m.picture = CreateObject("roSGNode","poster")
         m.picture.uri = "pkg:/images/my_poster_image.png"
@@ -110,18 +111,20 @@
     function onKeyEvent(key as String, press as Boolean) as Boolean
         if press then
             print key
-            print key = "right"
-            print m.button_group_1.isInFocusChain()
             print "==============="
         end if
 
         if m.button_group_1.isInFocusChain() then
             if key = "right" then
                 m.button_group_2.setFocus(True)
+                m.button_group_1.visible = false
+                m.button_group_2.visible = true
             end if
         else if m.button_group_2.isInFocusChain() then
             if key = "left" then
                 m.button_group_1.setFocus(True)
+                m.button_group_1.visible = true
+                m.button_group_2.visible = false
             end if
         end if
 
