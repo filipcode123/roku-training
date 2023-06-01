@@ -5,10 +5,10 @@
 <component name = "VideoExample" extends = "Scene" >
   <script type="text/brightscript" uri="pkg:/components/videoscene.brs"/>
   <children >
-  <Label text="My TV Station" translation="[5,0]" id="maintitle">
+  <Label text="My TV Station" translation="[5,0]" id="maintitle" color="0xFF9E00FF">
   <Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="50"/>
   </Label>
-  <Label text="Channel 1" translation="[5,60]" font="font:SmallBoldSystemFont">
+  <Label text="Channel 1" translation="[5,60]" font="font:SmallBoldSystemFont" color="0xFF9E00FF">
       <Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="30"/>
   </Label>
     <Video id = "exampleVideo" width="768" height="432"/>
