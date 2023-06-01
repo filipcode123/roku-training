@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "utf-8" ?> 
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name = "VideoExample" extends = "Scene" >
+
+  <script type = "text/brightscript" >
+
+    <![CDATA[
+
+    sub init()
+      videocontent = createObject("RoSGNode", "ContentNode")
+
+      videocontent.title = "Example Video"
+      videocontent.streamformat = "mp4"
+      videocontent.url = "https://roku-webdev-opus.s3.amazonaws.com/public-videos/big+stream+trimmed.mp4"
+
+      video = m.top.findNode("exampleVideo")
+      video.content = videocontent
+
+      video.setFocus(true)
+      video.control = "play"
+    end sub
+
+    ]]>
+
+  </script>
+
+  <children >
+
+    <Video id = "exampleVideo"/>
+
+  </children>
+
+</component>
