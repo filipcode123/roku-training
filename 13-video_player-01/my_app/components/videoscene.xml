@@ -3,33 +3,12 @@
 <!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
 
 <component name = "VideoExample" extends = "Scene" >
-
-  <script type = "text/brightscript" >
-
-    <![CDATA[
-
-    sub init()
-      videocontent = createObject("RoSGNode", "ContentNode")
-
-      videocontent.title = "Example Video"
-      videocontent.streamformat = "mp4"
-      videocontent.url = "https://roku-webdev-opus.s3.amazonaws.com/public-videos/big+stream+trimmed.mp4"
-
-      video = m.top.findNode("exampleVideo")
-      video.content = videocontent
-
-      video.setFocus(true)
-      video.control = "play"
-    end sub
-
-    ]]>
-
-  </script>
-
+  <script type="text/brightscript" uri="pkg:/components/videoscene.brs"/>
   <children >
-
     <Video id = "exampleVideo"/>
-
+    <ButtonGroup id="myButtonGroup" translation="[160,300]">
+      <Button text="Play"/>
+    </ButtonGroup>
   </children>
 
 </component>
