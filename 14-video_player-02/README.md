@@ -1,3 +1,2 @@
-Video plays when play button is selected and button group is in focus
+Added scaled down video player to screen with two labels 
 <img src="screenshot1.jpg">
-<img src="screenshot2.jpg">
