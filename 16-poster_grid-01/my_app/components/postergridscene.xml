@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name = "PosterGridExample" extends = "Scene" initialFocus = "examplePosterGrid" >
+  <script type="text/brightscript" uri="pkg:/components/postergridscene.brs"/>
+  <children>
+
+    <PosterGrid 
+      id = "examplePosterGrid" 
+      basePosterSize = "[ 512, 288 ]" 
+      caption1NumLines = "1" 
+      numColumns = "2" 
+      numRows = "5" 
+      itemSpacing = "[ 20, 20 ]"
+      translation = "[ 130, 160 ]"/>
+
+      <ContentNode id="myContentNode">
+        <ContentNode hdgridposterurl="http://www.sdktestinglab.com/Tutorial/images/rectanglepg.jpg" shortdescriptionline1="Rectangle Node"/>
+        <ContentNode hdgridposterurl="http://www.sdktestinglab.com/Tutorial/images/rectanglerotpg.jpg" shortdescriptionline1="Rectangle Node (Rotated)"/>
+        <ContentNode hdgridposterurl="http://www.sdktestinglab.com/Tutorial/images/labelpg.jpg" shortdescriptionline1="Label Node"/>
+        <ContentNode hdgridposterurl="http://www.sdktestinglab.com/Tutorial/images/posterpg.jpg" shortdescriptionline1="Poster Node"/>
+  </ContentNode>
+
+  </children>
+
+</component>
