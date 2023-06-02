@@ -2,12 +2,11 @@ sub init()
     m.top.backgroundColor = "0x314bdeff"
     m.top.backgroundURI = ""
 
-    videocontent = createObject("RoSGNode", "ContentNode")
-    videocontent.title = "Example Video"
-    videocontent.streamformat = "mp4"
-    videocontent.url = "https://roku-webdev-opus.s3.amazonaws.com/public-videos/big+stream+trimmed.mp4"
+    m.videocontent = createObject("RoSGNode", "ContentNode")
+    m.videocontent.title = "Example Video"
+    m.videocontent.streamformat = "mp4"
     m.video = m.top.findNode("exampleVideo")
-    m.video.content = videocontent
+    m.video.content = m.videocontent
 
     m.myButtonGroup = m.top.findNode("myButtonGroup")
     m.myButtonGroup.observeField("buttonSelected","onButtonGroupSelected")
@@ -21,6 +20,12 @@ sub onButtonGroupSelected()
     channel = get_channel(m.myButtonGroup.buttonSelected)
     if channel <> invalid then
         print "'"+channel+"' selected."
+        if channel = "Channel 1" then
+            m.videocontent.url = "https://roku-webdev-opus.s3.amazonaws.com/public-videos/big+stream+trimmed.mp4"
+        else if channel = "Channel 2" then
+            m.videocontent.url = "http://video.ted.com/talks/podcast/DanGilbert_2004_480.mp4"
+        end if
+        m.video.control = "play"
     else
         print "invalid channel"
     end if
@@ -34,14 +39,4 @@ function get_channel(index as Integer) as Object
     else
         return invalid
     end if
-end function
-
-function onKeyEvent(key as String, press as Boolean) as Boolean
-    if press then
-        if key = "play" and m.myButtonGroup.isInFocusChain()
-            m.video.control = "play"
-            m.video.setFocus(true)
-        end if
-    end if
-
 end function
