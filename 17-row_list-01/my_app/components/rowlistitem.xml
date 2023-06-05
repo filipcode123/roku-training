@@ -1,0 +1,50 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+ 
+<component name = "RowListItem" extends = "Group" >
+ 
+  <interface > 
+    <field id = "itemContent" type = "node" onChange = "showcontent"/>
+    <field id = "focusPercent" type = "float"/> 
+    <field id = "rowFocusPercent" type = "float"/>
+  </interface>
+ 
+  <script type = "text/brightscript" >
+
+    <![CDATA[
+
+    sub init()
+      m.itemposter = m.top.findNode("itemPoster") 
+      m.itemlabel = m.top.findNode("itemLabel")
+    end sub
+
+    sub showcontent()
+      itemcontent = m.top.itemContent
+      m.itemposter.uri = itemcontent.HDPosterUrl
+      m.itemlabel.text = itemcontent.title
+    end sub
+
+    ]]>
+
+  </script>
+
+  <children >
+
+    <Poster 
+      id = "itemPoster" 
+      translation = "[ 10, 10 ]" 
+      width = "512" 
+      height = "288" >
+
+    </Poster>
+
+    <Label 
+      id = "itemLabel" 
+      translation = "[ 20, 264 ]" 
+      horizAlign = "right" 
+      width = "492" />
+
+  </children>
+
+</component>
