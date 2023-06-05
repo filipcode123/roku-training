@@ -6,8 +6,6 @@
  
   <interface > 
     <field id = "itemContent" type = "node" onChange = "showcontent"/>
-    <field id = "focusPercent" type = "float"/> 
-    <field id = "rowFocusPercent" type = "float"/>
   </interface>
  
   <script type = "text/brightscript" >
