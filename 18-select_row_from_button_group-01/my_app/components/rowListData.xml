@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+ 
+<component name = "RowListData" extends = "ContentNode" >
+
+  <children>
+
+    <ContentNode title = "Row 1" >
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/poster_1.png" 
+        title = "Item 1" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/poster_2.png" 
+        title = "Item 2" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/poster_3.png" 
+        title = "Item 3" />
+    </ContentNode>
+
+    <ContentNode title = "Row 2" >
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/poster_1.png" 
+        title = "Item 1" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/poster_2.png" 
+        title = "Item 2" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/poster_3.png" 
+        title = "Item 3" />
+    </ContentNode>
+
+    <ContentNode title = "Row 3" >
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/poster_1.png" 
+        title = "Item 1" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/poster_2.png" 
+        title = "Item 2" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/poster_3.png" 
+        title = "Item 3" />
+    </ContentNode>
+
+  </children>
+
+</component>

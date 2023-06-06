@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="myScreen" extends="Scene">
+  <script type="text/brightscript" uri="pkg:/components/scene.brs"/>
+<children>
+    <ButtonGroup
+      id = "button_group_1"
+      translation = "[20,300]">
+        <Button text="Row 1"/>
+        <Button text="Row 2"/>
+        <Button text="Row 3"/>
+    </ButtonGroup>
+    <RowList 
+      id = "row_list_1" 
+      translation = "[300,20]"
+      itemComponentName = "MyRowListItem" 
+      numRows = "3" 
+      itemSize = "[ 500, 280 ]" 
+      rowItemSize = "[ [200, 200] ]"
+      rowItemSpacing = "[[20,0]]"
+      showRowLabel = "[ true ]" 
+      drawFocusFeedback = "true" 
+      rowLabelOffset = "[ [0,20] ]"
+      vertFocusAnimationStyle = "fixedFocusWrap" 
+      rowFocusAnimationStyle = "fixedFocusWrap" />
+</children>
+</component>
