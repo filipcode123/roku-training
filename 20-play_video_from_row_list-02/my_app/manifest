@@ -1,0 +1,23 @@
+'********** Copyright 2016 Roku Corp.  All Rights Reserved. **********
+
+title=My TV Channel
+subtitle=A sample TV channel app
+major_version=1
+minor_version=0
+build_version=00000
+
+mm_icon_focus_hd=pkg:/images/focus_hd.png
+
+mm_icon_focus_sd=pkg:/images/focus_sd.png
+
+
+splash_screen_sd=pkg:/images/splash_sd.png
+
+splash_screen_hd=pkg:/images/splash_hd.png
+
+splash_screen_fhd=pkg:/images/splash_fhd.png
+
+splash_color=#00a8ff
+splash_min_time=1000
+
+ui_resolutions = "hd"
