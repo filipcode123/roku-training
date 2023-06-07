@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="myScreen" extends="Scene">
+  <script type="text/brightscript" uri="pkg:/components/scene.brs"/>
+<children>
+<Label
+text="My TV Channel" />
+<Label
+id="channel_label"
+translation = "[0,30]"
+text="Channel 1" />
+    <ButtonGroup
+      id = "button_group_1"
+      translation = "[20,300]">
+        <Button text="Channel 1"/>
+        <Button text="Channel 2"/>
+        <Button text="Channel 3"/>
+    </ButtonGroup>
+    <RowList 
+      id = "row_list_1" 
+      translation = "[300,100]"
+      itemComponentName = "MyRowListItem" 
+      numRows = "3" 
+      itemSize = "[ 660, 320 ]" 
+      rowItemSize = "[ [200, 200] ]"
+      rowItemSpacing = "[[20,0]]"
+      showRowLabel = "[ true ]" 
+      drawFocusFeedback = "true" 
+      rowLabelOffset = "[ [0,20] ]"
+      vertFocusAnimationStyle = "fixedFocusWrap" 
+      rowFocusAnimationStyle = "fixedFocusWrap" />
+
+      <Video id="video_1" visible = "false"/>
+</children>
+</component>
