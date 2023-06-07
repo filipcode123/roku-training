@@ -26,6 +26,7 @@ end sub
 function onKeyEvent(key as String, press as Boolean) as Boolean  
     if press = true then
         if key = "right" and m.button_group_1.isInFocusChain() then
+            m.row_list.jumpToItem = m.button_group_1.buttonFocused
             m.row_list.setFocus(True)
         end if
     end if
