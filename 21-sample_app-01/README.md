@@ -13,6 +13,6 @@ Press right and the respective row will be focused and the subtitle will update.
 Subtitle updates when changing focused row manually.<br>
 <img src="dev (2).jpg" width=300><br>
 Video plays with respective title of selected row item.<br>
-<img src="dev (3).jpg" width=300><br>
+<img src="dev (4).jpg" width=300><br>
 Press Back and the video will be stopped and hidden; the app returns to the main screen.<br>
 <img src="dev (2).jpg" width=300>
