@@ -4,17 +4,17 @@
 <children>
 <Label
 text="My TV Channel"
-translation="[10,0]"
+translation="[40,30]"
 color="0x8DFDFFFF">
-<Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="40"/>
+<Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="35"/>
 </Label>
 <Label
 text="Channel 1"
 id="channel_label"
-translation="[10,50]"
+translation="[40,80]"
 color="0x8DFDFFFF"
 >
-<Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="30"/>
+<Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="25"/>
 </Label>
     <ButtonGroup
       id = "button_group_1"
