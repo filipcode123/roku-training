@@ -1,4 +1,18 @@
-User can:
-* select a row from the list of buttons
-* select a video from the items in the rows
-* navigate back from the video to the main screen
+# My TV
+An app for watching one of a selection of videos.
+# Features
+* Focus on a row by focusing on a button then pressing `Right`.
+* "Channel" subtitle updates when the focused row changes.
+* Play a video by selecting a row item. The video title matches the label selected row item.
+* Navigate back to the main screen from the video screen by presing `Back`.
+# Screenshots
+Choose a button.<br>
+<img src="dev.jpg" width=300><br>
+Press right and the respective row will be focused and the subtitle will update.<br>
+<img src="dev (1).jpg" width=300><br>
+Subtitle updates when changing focused row manually.<br>
+<img src="dev (2).jpg" width=300><br>
+Video plays with respective title of selected row item.<br>
+<img src="dev (3).jpg" width=300><br>
+Press Back and the video will be stopped and hidden; the app returns to the main screen.<br>
+<img src="dev (2).jpg" width=300>
