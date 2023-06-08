@@ -12,8 +12,8 @@
 
     <Poster 
       id = "itemPoster"  
-      width = "200" 
-      height = "200" >
+      width = "300" 
+      height = "160" >
 
     </Poster>
 
@@ -21,8 +21,8 @@
       id = "itemLabel" 
       horizAlign = "left" 
       vertAlign = "bottom"
-      width="200" 
-      height="240" />
+      width="300" 
+      height="200" />
 
   </children>
 

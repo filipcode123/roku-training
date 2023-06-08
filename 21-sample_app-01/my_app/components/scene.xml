@@ -3,11 +3,19 @@
   <script type="text/brightscript" uri="pkg:/components/scene.brs"/>
 <children>
 <Label
-text="My TV Channel" />
+text="My TV Channel"
+translation="[10,0]"
+color="0x8DFDFFFF">
+<Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="40"/>
+</Label>
 <Label
+text="Channel 1"
 id="channel_label"
-translation = "[0,30]"
-text="Channel 1" />
+translation="[10,50]"
+color="0x8DFDFFFF"
+>
+<Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="30"/>
+</Label>
     <ButtonGroup
       id = "button_group_1"
       translation = "[20,300]">
@@ -20,8 +28,8 @@ text="Channel 1" />
       translation = "[300,100]"
       itemComponentName = "MyRowListItem" 
       numRows = "3" 
-      itemSize = "[ 660, 320 ]" 
-      rowItemSize = "[ [200, 200] ]"
+      itemSize = "[ 1000, 280 ]" 
+      rowItemSize = "[ [300, 160] ]"
       rowItemSpacing = "[[20,0]]"
       showRowLabel = "[ true ]" 
       drawFocusFeedback = "true" 
