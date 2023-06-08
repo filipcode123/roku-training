@@ -4,7 +4,7 @@ sub init()
     m.video = m.top.FindNode("video_1")
 
     m.top.backgroundURI = ""
-    setBackgroundColor("0x000000ff")
+    setBackgroundColor("0x035C78ff")
 
     ' m.button_group_1.observeField("buttonFocused","onButtonGroupFocused")
 
