@@ -16,3 +16,5 @@ Video plays with respective title of selected row item.<br>
 <img src="dev (4).jpg" width=300><br>
 Press `Back` and the video will be stopped and hidden; the app returns to the main screen.<br>
 <img src="dev (2).jpg" width=300>
+Press `Left` to switch focus from the row list to the button group.<br>
+<img src="dev.jpg" width=300>
