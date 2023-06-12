@@ -53,7 +53,14 @@
     width="800"
     height="500"
     visible = "false"
-    translation="[200,100]"/>
+    color="0x0000FFFF"
+    translation="[200,100]">
+  <ButtonGroup
+  id="dialog_buttons">
+    <Button 
+    text="Close"/>
+  </ButtonGroup>
+    </Rectangle>
 
 
 

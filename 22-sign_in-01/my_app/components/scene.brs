@@ -3,6 +3,7 @@ sub init()
     m.row_list = m.top.findNode("row_list_1")
     m.video = m.top.findNode("video_1")
     m.sign_in_buttons = m.top.findNode("sign_in_buttons")
+    m.dialog_buttons = m.top.findNode("dialog_buttons")
 
     m.top.backgroundURI = ""
     setBackgroundColor("0x035C78ff")
@@ -20,6 +21,7 @@ end sub
 sub displaySignInDialog()
     sign_in_dialog = m.top.findNode("sign_in_pop_up_rectangle")
     sign_in_dialog.visible = "true"
+    m.dialog_buttons.setFocus(True)
 end sub
 
 
