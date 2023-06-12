@@ -35,7 +35,7 @@ sub onDialogSelected()
     end if
 end sub
 
-sub setSuccessfulLogInField()
+' sub setSuccessfulLogInField()
 '     TODO: set successfulLogIn
 ' end sub
 
