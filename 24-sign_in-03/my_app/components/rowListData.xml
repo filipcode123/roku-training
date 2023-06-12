@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+ 
+<component name = "RowListData" extends = "ContentNode" >
+
+  <children>
+
+    <ContentNode title = "Channel 1" >
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/movie_1.png" 
+        title = "Movie 1" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/movie_2.png" 
+        title = "Movie 2" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/movie_3.png" 
+        title = "Movie 3" />
+    </ContentNode>
+
+    <ContentNode title = "Channel 2" >
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/movie_4.png" 
+        title = "Movie 4" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/movie_5.png" 
+        title = "Movie 5" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/movie_6.png" 
+        title = "Movie 6" />
+    </ContentNode>
+
+    <ContentNode title = "Channel 3" >
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/movie_7.png" 
+        title = "Movie 7" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/movie_8.png" 
+        title = "Movie 8" />
+      <ContentNode 
+        HDPosterUrl = "pkg:/images/movie_9.png" 
+        title = "Movie 9" />
+    </ContentNode>
+
+  </children>
+
+</component>

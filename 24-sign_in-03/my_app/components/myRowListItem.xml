@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+ 
+<component name = "MyRowListItem" extends = "Group" >
+  <script type="text/brightscript" uri="pkg:/components/myRowListItem.brs"/>
+  <interface > 
+    <field id = "itemContent" type = "node" onChange = "showcontent"/>
+  </interface>
+
+  <children >
+
+    <Poster 
+      id = "itemPoster"  
+      width = "300" 
+      height = "160" >
+
+    </Poster>
+
+    <Label 
+      id = "itemLabel" 
+      horizAlign = "left" 
+      vertAlign = "bottom"
+      width="300" 
+      height="200" />
+
+  </children>
+
+</component>
