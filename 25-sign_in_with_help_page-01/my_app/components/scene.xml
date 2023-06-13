@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="myScreen" extends="Scene">
+  <script type="text/brightscript" uri="pkg:/components/scene.brs"/>
+<children>
+
+  <Label
+  text="My TV Channel"
+  translation="[40,30]"
+  color="0x8DFDFFFF">
+  <Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="35"/>
+  </Label>
+
+  <Label
+  text="Channel 1"
+  id="channel_label"
+  translation="[40,80]"
+  color="0x8DFDFFFF">
+  <Font role="font" uri="pkg:/fonts/ChunkFive-Regular.otf" size="25"/>
+  </Label>
+
+  <ButtonGroup
+    id = "button_group_1"
+    translation = "[20,300]">
+      <Button text="Channel 1"/>
+      <Button text="Channel 2"/>
+      <Button text="Channel 3"/>
+    <Button text="Help"/>
+  </ButtonGroup>
+
+  <RowList 
+    id = "row_list_1" 
+    translation = "[300,100]"
+    itemComponentName = "MyRowListItem" 
+    numRows = "3" 
+    itemSize = "[ 1000, 280 ]" 
+    rowItemSize = "[ [300, 160] ]"
+    rowItemSpacing = "[[20,0]]"
+    showRowLabel = "[ true ]" 
+    drawFocusFeedback = "true" 
+    rowLabelOffset = "[ [0,20] ]"
+    vertFocusAnimationStyle = "fixedFocusWrap" 
+    rowFocusAnimationStyle = "fixedFocusWrap"
+    visible="true" />
+
+  <ButtonGroup
+  id="sign_in_buttons"
+  translation="[1090,0]">
+    <Button 
+    id="sign_in_button"
+    text="Sign in"/>
+  </ButtonGroup>
+
+  <Rectangle
+    id="sign_in_pop_up_rectangle"
+    width="800"
+    height="500"
+    visible = "false"
+    color="0x0000FFFF"
+    translation="[200,100]">
+  <ButtonGroup
+  id="button_group">
+    <Button 
+    text="Close"/>
+    <Button 
+    text="Next"/>
+  </ButtonGroup>
+  <TextEditBox
+  id="email_box"
+  text="test@test.com"
+  translation="[0,200]"
+  clearOnDownKey="false"/>
+  <TextEditBox
+  id="password_box"
+  text="123"
+  translation="[0,250]"
+  clearOnDownKey="false"
+  secureMode="true"/>
+    </Rectangle>
+
+  <Label
+  id="sign_in_toast"
+  text="Sign in successful"
+  visible="false"
+  translation="[400,0]"/>
+
+  <Video id="video_1" visible = "false"/>
+  <Rectangle
+  width="900"
+  height="600"
+  translation = "[300,100]"
+  color="0x00000033"
+  id="helpRectangle"
+  visible="false">
+    <Label
+  width="900"
+  height="900"
+    text="How to use the app"
+    horizAlign="center"
+    translation="[0,30]"/>
+    <ScrollableText 
+      width="800"
+      translation="[50,100]"
+      id="longText"
+      height="300"
+    text = "Choose a channel using the channel buttons.&#xA;Play a movie from the any row on the row list.&#xA;Sign in to watch movies from Channel 3.&#xA;"
+    horizAlign = "center" 
+    vertAlign = "top" />
+    <ButtonGroup
+      id="closeButton"
+      translation="[400,500]">
+      <Button text="Close"/>
+    </ButtonGroup>
+  </Rectangle>
+</children>
+</component>
