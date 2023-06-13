@@ -84,12 +84,21 @@ sub setBackgroundColor(colour as String)
 end sub
 
 sub onRowListSelected()
-    rowItemSelected = m.row_list.rowItemSelected
-    rowListContent = m.row_list.content
-    selectedRow = rowListContent.getChild(rowItemSelected.getEntry(0))
-    selectedItem = selectedRow.getChild(rowItemSelected.getEntry(1))
-    video_title = selectedItem.TITLE
-    playVideo(video_title)
+        rowItemSelected = m.row_list.rowItemSelected
+        rowListContent = m.row_list.content
+        selectedRow = rowListContent.getChild(rowItemSelected.getEntry(0))
+        selectedItem = selectedRow.getChild(rowItemSelected.getEntry(1))
+        video_title = selectedItem.TITLE
+        print rowItemSelected.getEntry(0)
+        print rowItemSelected.getEntry(1)
+    
+    if m.global.successfulLogIn = false then
+        if rowItemSelected.getEntry(0) <> 2 then
+            playVideo(video_title)
+        end if
+    else
+        playVideo(video_title)
+    end if
 end sub
 
 sub playVideo(video_title)
@@ -154,6 +163,12 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
             handled = true
         else if key = "OK" and m.password_box.hasFocus() then
             createDialog("Enter password","password")
+            handled = true
+        else if key = "down" and m.sign_in_buttons.isInFocusChain() then
+            m.row_list.setFocus(True)
+            handled = true
+        else if key = "up" and m.button_group_1.isInFocusChain() then
+            m.sign_in_buttons.setFocus(True)
             handled = true
         end if
     end if
