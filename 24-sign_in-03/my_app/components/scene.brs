@@ -1,4 +1,5 @@
 sub init()
+    m.global.addFields({successfulLogIn: false})
     m.button_group_1 = m.top.findNode("button_group_1")
     m.row_list = m.top.findNode("row_list_1")
     m.video = m.top.findNode("video_1")
@@ -31,13 +32,14 @@ sub onDialogSelected()
             closeSignInDialog()
             displayToast()
             setSuccessfulLogInField()
+            print "successfulLogIn: "+m.global.successfulLogIn.toStr()
         end if
     end if
 end sub
 
-' sub setSuccessfulLogInField()
-'     TODO: set successfulLogIn
-' end sub
+sub setSuccessfulLogInField()
+    m.global.successfulLogIn = true
+end sub
 
 sub displayToast()
     m.top.findNode("sign_in_toast").visible = "true"
