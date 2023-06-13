@@ -29,12 +29,17 @@ sub onDialogSelected()
         closeSignInDialog()
     else if focused_button = 1 then
         if validateInput() then
+            updateSignInButton("Sign out")
             closeSignInDialog()
             displayToast()
             setSuccessfulLogInField()
             print "successfulLogIn: "+m.global.successfulLogIn.toStr()
         end if
     end if
+end sub
+
+sub updateSignInButton(text as String)
+    m.sign_in_buttons.getChild(0).text = text
 end sub
 
 sub setSuccessfulLogInField()

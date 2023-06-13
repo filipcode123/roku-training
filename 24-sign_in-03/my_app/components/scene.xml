@@ -42,7 +42,7 @@
 
   <ButtonGroup
   id="sign_in_buttons"
-  translation="[1100,0]">
+  translation="[1090,0]">
     <Button 
     id="sign_in_button"
     text="Sign in"/>
